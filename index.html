@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tradexy Limited</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
+        integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <style type="text/tailwindcss">
+        @theme {
+        --color-clifford: #da373d;
+      }
+    </style>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body class="font-jost">
+    <nav class="banner-background">
+        <!-- Header -->
+        <header class="px-4 2xl:px-20 border-b border-[#2a5dca26] py-6">
+            <div class="flex items-center justify-between">
+                <div class="flex items-center gap-20">
+                    <img src="./image/logo.png" alt="image-logo" />
+                    <ul class="hidden lg:flex items-center">
+                        <li>
+                            <a href="/" class="font-semibold text-gray-600 hover:text-[#2660B5]">Home +</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="hidden md:block">
+                    <button
+                        class="border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-black transition-colors duration-300">
+                        Contact Us
+                        <span>
+                            <i class="fa-solid fa-arrow-up rotate-45"></i>
+                        </span>
+                    </button>
+                </div>
+            </div>
+        </header>
+
+        <!-- Banner -->
+        <div class="container mx-auto pt-12 md:pt-24 px-4">
+            <div class="flex items-center justify-center md:justify-start gap-3 font-bold text-center md:text-left">
+                <img class="hidden sm:block" src="./image/section-badge1.png" alt="banner image" />
+                <h1 class="text-[#2660B5] text-2xl">Reliable Trading Signals for Consistent Profits</h1>
+            </div>
+            <div class="flex flex-col lg:flex-row items-center justify-center md:justify-start gap-10">
+                <h1 class="text-3xl sm:text-5xl lg:text-7xl font-bold text-[#222E48] my-5 md:max-w-4xl leading-snug text-center md:text-left">
+                    Learn From Top Traders To Forex Trading
+                </h1>
+
+                <!-- Circle Animation -->
+                <div class="relative w-28 h-28 md:w-40 md:h-40 flex items-center justify-center">
+                    <div
+                        class="w-28 h-28 md:w-40 md:h-40 border border-[#9c9fa6] rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
+                        <img src="./image/text-circle.png" alt="circle image" />
+                    </div>
+                    <div class="border border-[#9c9fa6] rounded-full p-3 md:p-4 absolute">
+                        <div class="bg-[#2660B5] w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center">
+                            <span class="text-white">
+                                <i class="fa-solid fa-arrow-up rotate-45"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Hero Image -->
+            <div class="mt-8">
+                <img src="./image/hero-thumb2.png" alt="banner image" class="w-full max-w-5xl mx-auto" />
+            </div>
+        </div>
+    </nav>
+</body>
+
+</html>

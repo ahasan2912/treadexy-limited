@@ -1,0 +1,26 @@
+.font-jost{
+  font-family: "Jost", sans-serif;
+}
+
+.banner-background {
+  background-image: url('./image/download.png');
+  background-size: cover;  
+  background-position: center;
+}
+
+html {
+  scrollbar-gutter: stable;
+}
+
+::-webkit-scrollbar {
+  width: 6px;            
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #2660B5;
+  border-radius: 9999px;
+}
