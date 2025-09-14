@@ -7,18 +7,35 @@
     <title>Tradexy Limited</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css"
         integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link href="https://fonts.googleapis.com/css2?family=Jost:ital,wght@0,100..900;1,100..900&display=swap"
         rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="style.css">
     <style type="text/tailwindcss">
         @theme {
         --color-clifford: #da373d;
       }
     </style>
-    <link rel="stylesheet" href="style.css">
+    <style>
+        .swiper-slide {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-sizing: border-box;
+        }
+
+        .logo-item img {
+            max-height: 40px;
+            /* Adjust this value to set the height of your logos */
+            width: auto;
+            object-fit: contain;
+        }
+    </style>
 </head>
 
 <body class="font-jost">
@@ -68,7 +85,8 @@
                 class="fixed top-0 right-0 w-full h-full bg-[#2660B5] shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
                 <div class="flex justify-end p-4">
                     <button id="close-btn" class="pt-2">
-                        <div class="w-12 h-12 flex items-center justify-center rounded-full p-2 border border-yellow-500">
+                        <div
+                            class="w-12 h-12 flex items-center justify-center rounded-full p-2 border border-yellow-500">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-yellow-500" fill="none"
                                 viewBox="0 0 24 24" stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -403,6 +421,58 @@
                 </div>
             </div>
         </section>
+        <!-------------------------- Swiper Js ------------------------------------>
+        <section class="bg-[#f5f5f7] py-12">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+                <div class="swiper myLogoSwiper">
+                    <div class="swiper-wrapper">
+
+                        <div class="swiper-slide">
+                            <div class="logo-item">
+                                <img src="./image/jotform.png" alt="ClickUp">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="logo-item">
+                                <img src="./image/lattice.png" alt="Jotform">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="logo-item">
+                                <img src="./image/slack.png" alt="Lattice">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="logo-item">
+                                <img src="./image/trello.png" alt="Slack">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="logo-item">
+                                <img src="./image/clickup.png">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="logo-item">
+                                <img src="./image/jotform.png" alt="ClickUp">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="logo-item">
+                                <img src="./image/lattice.png" alt="Jotform">
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="logo-item">
+                                <img src="./image/slack.png" alt="Lattice">
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
     </main>
     <!--------------------------------- Footer --------------------------------->
     <div class="bg-cover bg-center flex items-center justify-center pt-6 lg:pt-20 footer-background">
@@ -456,7 +526,7 @@
                             <div class='flex border border-[#2660B5] rounded-full p-1'>
                                 <a href="/"
                                     class="w-8 h-8 flex items-center justify-center p-1.5 rounded-full hover:bg-[#2660B5] transition-colors duration-200 text-white">
-                                    <i class="fa-solid fa-phone-volume text-xl"></i>
+                                    <i class="fa-solid fa-phone-volume text-lg"></i>
                                 </a>
                             </div>
                             <span class='text-base text-white'>01796905988</span>
@@ -552,6 +622,34 @@
             mobileMenu.classList.add("translate-x-full");
             menuIcon.classList.remove("hidden");
             closeIcon.classList.add("hidden");
+        });
+    </script>
+    <!------------------------------- JavaScript for Swiper Js --------------->
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const swiper = new Swiper('.myLogoSwiper', {
+                loop: true,
+                slidesPerView: 2,
+                spaceBetween: 30,
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
+                },
+                breakpoints: {
+                    640: {
+                        slidesPerView: 3,
+                        spaceBetween: 40,
+                    },
+                    768: {
+                        slidesPerView: 4,
+                        spaceBetween: 50,
+                    },
+                    1024: {
+                        slidesPerView: 6,
+                        spaceBetween: 60,
+                    },
+                },
+            });
         });
     </script>
 </body>
