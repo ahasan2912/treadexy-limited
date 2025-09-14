@@ -29,7 +29,8 @@
             <div class="flex items-center justify-between">
                 <div class="flex items-center gap-20">
                     <img src="./image/logo.png" alt="image-logo" />
-                    <ul class="hidden lg:flex items-center">
+                    <!-- Dasktop -->
+                    <ul class="hidden md:flex items-center">
                         <li>
                             <a href="/" class="font-semibold text-gray-600 hover:text-[#2660B5]">Home +</a>
                         </li>
@@ -43,6 +44,42 @@
                             <i class="fa-solid fa-arrow-up rotate-45"></i>
                         </span>
                     </button>
+                </div>
+                <!-- Mobile -->
+                <div class="md:hidden flex items-end gap-4">
+                    <button id="menu-toggle" class="focus:outline-none">
+                        <!-- Menu Icon -->
+                        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M4 6h16M4 12h16M4 18h16" />
+                        </svg>
+                        <!-- Close Icon -->
+                        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 hidden" fill="none"
+                            viewBox="0 0 24 24" stroke="currentColor">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                d="M6 18L18 6M6 6l12 12" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu"
+                class="fixed top-0 right-0 w-full h-full bg-[#2660B5] shadow-lg transform translate-x-full transition-transform duration-300 ease-in-out z-50 md:hidden">
+                <div class="flex justify-end p-4">
+                    <button id="close-btn" class="pt-2">
+                        <div class="w-12 h-12 flex items-center justify-center rounded-full p-2 border border-yellow-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-7 w-7 text-yellow-500" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M6 18L18 6M6 6l12 12" />
+                            </svg>
+                        </div>
+                    </button>
+                </div>
+                <div class=" w-[95%] flex justify-between items-center gap-4 px-6 font-medium">
+                    <a href="/" class="font-semibold text-white text-lg cursor-pointer">Home</a>
+                    <a href="/" class="font-semibold text-white text-xl cursor-pointer">+</a>
                 </div>
             </div>
         </header>
@@ -366,133 +403,157 @@
                 </div>
             </div>
         </section>
-        <!--------------------------------- Footer --------------------------------->
-        <div class="bg-cover bg-center flex items-center justify-center pt-6 lg:pt-20 footer-background">
-            <footer class=" text-white pt-8 px-4">
-                <div class="max-w-7xl mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-24 lg:grid-cols-4 lg:gap-8">
-                    <div class="space-y-4">
-                        <div class="flex items-center space-x-2">
-                            <img src='./image/logo-light.png' alt="" />
-                        </div>
-                        <p class="text-[#EBECEF]">
-                            TRADEXY is a comprehensive platform designed to empower traders at every level. TRADEXY
-                            provides the tools, insights.
-                        </p>
-                        <div class="flex space-x-4">
-                            <div class='flex border border-[#2660B5] rounded-full p-1'>
-                                <a href="/" class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
-                                   <i class="fa-brands fa-facebook text-xl"></i>
-                                </a>
-                            </div>
-                            <div class='flex border border-[#2660B5] rounded-full p-1'>
-                                <a href="/" class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
-                                   <i class="fa-brands fa-twitter text-xl"></i>
-                                </a>
-                            </div>
-                            <div class='flex border border-[#2660B5] rounded-full p-1'>
-                                <a href="/" class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
-                                    <i class="fa-brands fa-pinterest-p text-xl"></i>
-                                </a>
-                            </div>
-                            <div class='flex border border-[#2660B5] rounded-full p-1'>
-                                <a href="/" class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
-                                    <i class="fa-brands fa-twitch text-xl"></i>
-                                </a>
-                            </div>
-                            <div class='flex border border-[#2660B5] rounded-full p-1'>
-                                <a href="/" class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
-                                    <i class="fa-brands fa-square-linkedin text-xl"></i>
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-bold">Contact</h3>
-                        <ul class="space-y-5 text-gray-400 text-sm">
-                            <li class="flex items-center space-x-2">
-                                <div class='flex border border-[#2660B5] rounded-full p-1'>
-                                    <a href="/"
-                                        class="w-8 h-8 flex items-center justify-center p-1.5 rounded-full hover:bg-[#2660B5] transition-colors duration-200 text-white">
-                                        <i class="fa-solid fa-phone-volume text-xl"></i>
-                                    </a>
-                                </div>
-                                <span class='text-base text-white'>01796905988</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <div class='flex border border-[#2660B5] rounded-full p-1'>
-                                    <a href="/"
-                                        class="w-8 h-8 flex items-center justify-center p-1.5 rounded-full hover:bg-[#2660B5] transition-colors duration-200 text-white">
-                                        <i class="fa-solid fa-envelope-circle-check text-xl"></i>
-                                    </a>
-                                </div>
-                                <span class='text-base text-white'>jhondeo@123.gmail.com</span>
-                            </li>
-                            <li class="flex items-center space-x-2">
-                                <div class='flex border border-[#2660B5] rounded-full p-1'>
-                                    <a href="/"
-                                        class="w-8 h-8 flex items-center justify-center p-1.5 rounded-full hover:bg-[#2660B5] transition-colors duration-200 text-white">
-                                        <i class="fa-solid fa-location-dot text-xl"></i>
-                                    </a>
-                                </div>
-                                <span class='text-base text-white'>Mirpur-1, Dhaka, Bangladesh</span>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-2xl font-bold">Newsletter</h3>
-                        <p class="text-white text-base my-5">
-                            Subscribe our newsletter to get our latest update & news
-                        </p>
-                        <div class="relative">
-                            <input type="email" placeholder="Email Address"
-                                class="w-full bg-[#1e3a63] border border-gray-600 rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
-                            <button
-                                class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-200">
-                                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-45" fill="none"
-                                    viewBox="0 0 24 24" stroke="currentColor">
-                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
-                                        d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
-                                </svg>
-                            </button>
-                        </div>
-                    </div>
-                    <div class="space-y-4">
-                        <h3 class="text-lg font-bold">Quick Link</h3>
-                        <ul class="space-y-2 text-white text-base">
-                            <li>
-                                <a href="/">About us</a>
-                            </li>
-                            <li>
-                                <a href="/">Brokerage Reviews</a>
-                            </li>
-                            <li>
-                                <a href="/">Market Analysis</a>
-                            </li>
-                            <li>
-                                <a href="/">Educate</a>
-                            </li>
-                            <li>
-                                <a href="/">Serve</a>
-                            </li>
-                        </ul>
-                    </div>
-                </div>
-                <div
-                    class="mt-12 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-white text-sm md:text-base">
-                    <div class="text-center md:text-left mb-2 md:mb-0">
-                        Copyright © 2025 <span class="text-[#FCB650]">Tredexy</span>. Designed By <span
-                            class="text-[#FCB650]">Pixelaxis</span>
-                    </div>
-                    <div class="flex space-y-2 md:space-y-0 md:space-x-4 text-center">
-                        <a href="/" class="hover:text-white transition-colors duration-200">Help & Support</a>
-                        <a href="/" class="hover:text-white transition-colors duration-200">Privacy policy</a>
-                        <a href="/" class="hover:text-white transition-colors duration-200">Terms & Conditions
-                        </a>
-                    </div>
-                </div>
-            </footer>
-        </div>
     </main>
+    <!--------------------------------- Footer --------------------------------->
+    <div class="bg-cover bg-center flex items-center justify-center pt-6 lg:pt-20 footer-background">
+        <footer class=" text-white pb-4 pt-8 px-4">
+            <div class="max-w-7xl mx-auto grid grid-cols-1 gap-8 sm:grid-cols-2 md:gap-24 lg:grid-cols-4 lg:gap-8">
+                <div class="space-y-4">
+                    <div class="flex items-center space-x-2">
+                        <img src='./image/logo-light.png' alt="" />
+                    </div>
+                    <p class="text-[#EBECEF]">
+                        TRADEXY is a comprehensive platform designed to empower traders at every level. TRADEXY
+                        provides the tools, insights.
+                    </p>
+                    <div class="flex space-x-4">
+                        <div class='flex border border-[#2660B5] rounded-full p-1'>
+                            <a href="/"
+                                class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
+                                <i class="fa-brands fa-facebook text-xl"></i>
+                            </a>
+                        </div>
+                        <div class='flex border border-[#2660B5] rounded-full p-1'>
+                            <a href="/"
+                                class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
+                                <i class="fa-brands fa-twitter text-xl"></i>
+                            </a>
+                        </div>
+                        <div class='flex border border-[#2660B5] rounded-full p-1'>
+                            <a href="/"
+                                class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
+                                <i class="fa-brands fa-pinterest-p text-xl"></i>
+                            </a>
+                        </div>
+                        <div class='flex border border-[#2660B5] rounded-full p-1'>
+                            <a href="/"
+                                class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
+                                <i class="fa-brands fa-twitch text-xl"></i>
+                            </a>
+                        </div>
+                        <div class='flex border border-[#2660B5] rounded-full p-1'>
+                            <a href="/"
+                                class="w-8 h-8 p-2 rounded-full hover:bg-[#2660B5] transition-colors duration-200 flex justify-center items-center">
+                                <i class="fa-brands fa-square-linkedin text-xl"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Contact</h3>
+                    <ul class="space-y-5 text-gray-400 text-sm">
+                        <li class="flex items-center space-x-2">
+                            <div class='flex border border-[#2660B5] rounded-full p-1'>
+                                <a href="/"
+                                    class="w-8 h-8 flex items-center justify-center p-1.5 rounded-full hover:bg-[#2660B5] transition-colors duration-200 text-white">
+                                    <i class="fa-solid fa-phone-volume text-xl"></i>
+                                </a>
+                            </div>
+                            <span class='text-base text-white'>01796905988</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class='flex border border-[#2660B5] rounded-full p-1'>
+                                <a href="/"
+                                    class="w-8 h-8 flex items-center justify-center p-1.5 rounded-full hover:bg-[#2660B5] transition-colors duration-200 text-white">
+                                    <i class="fa-solid fa-envelope-circle-check text-xl"></i>
+                                </a>
+                            </div>
+                            <span class='text-base text-white'>jhondeo@123.gmail.com</span>
+                        </li>
+                        <li class="flex items-center space-x-2">
+                            <div class='flex border border-[#2660B5] rounded-full p-1'>
+                                <a href="/"
+                                    class="w-8 h-8 flex items-center justify-center p-1.5 rounded-full hover:bg-[#2660B5] transition-colors duration-200 text-white">
+                                    <i class="fa-solid fa-location-dot text-xl"></i>
+                                </a>
+                            </div>
+                            <span class='text-base text-white'>Mirpur-1, Dhaka, Bangladesh</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-2xl font-bold">Newsletter</h3>
+                    <p class="text-white text-base my-5">
+                        Subscribe our newsletter to get our latest update & news
+                    </p>
+                    <div class="relative">
+                        <input type="email" placeholder="Email Address"
+                            class="w-full bg-[#1e3a63] border border-gray-600 rounded-md py-3 px-4 text-white placeholder-gray-400 focus:outline-none focus:ring-2 focus:ring-blue-500" />
+                        <button
+                            class="absolute right-2 top-1/2 -translate-y-1/2 bg-blue-500 text-white p-2 rounded-full hover:bg-blue-600 transition-colors duration-200">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 rotate-45" fill="none"
+                                viewBox="0 0 24 24" stroke="currentColor">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2}
+                                    d="M12 19l9 2-9-18-9 18 9-2zm0 0v-8" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <div class="space-y-4">
+                    <h3 class="text-lg font-bold">Quick Link</h3>
+                    <ul class="space-y-2 text-white text-base">
+                        <li>
+                            <a href="/">About us</a>
+                        </li>
+                        <li>
+                            <a href="/">Brokerage Reviews</a>
+                        </li>
+                        <li>
+                            <a href="/">Market Analysis</a>
+                        </li>
+                        <li>
+                            <a href="/">Educate</a>
+                        </li>
+                        <li>
+                            <a href="/">Serve</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div
+                class="mt-12 pt-6 border-t border-gray-700 flex flex-col md:flex-row justify-between items-center text-white text-sm md:text-base">
+                <div class="text-center md:text-left mb-2 md:mb-0">
+                    Copyright © 2025 <span class="text-[#FCB650]">Tredexy</span>. Designed By <span
+                        class="text-[#FCB650]">Pixelaxis</span>
+                </div>
+                <div class="flex space-y-2 md:space-y-0 md:space-x-4 text-center">
+                    <a href="/" class="hover:text-white transition-colors duration-200">Help & Support</a>
+                    <a href="/" class="hover:text-white transition-colors duration-200">Privacy policy</a>
+                    <a href="/" class="hover:text-white transition-colors duration-200">Terms & Conditions
+                    </a>
+                </div>
+            </div>
+        </footer>
+    </div>
+    <script>
+        const menuToggle = document.getElementById("menu-toggle");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeBtn = document.getElementById("close-btn");
+        const menuIcon = document.getElementById("menu-icon");
+        const closeIcon = document.getElementById("close-icon");
+
+        menuToggle.addEventListener("click", () => {
+            mobileMenu.classList.toggle("translate-x-full");
+            menuIcon.classList.toggle("hidden");
+            closeIcon.classList.toggle("hidden");
+        });
+
+        closeBtn.addEventListener("click", () => {
+            mobileMenu.classList.add("translate-x-full");
+            menuIcon.classList.remove("hidden");
+            closeIcon.classList.add("hidden");
+        });
+    </script>
 </body>
 
 </html>
