@@ -8,6 +8,12 @@
   background-position: center;
 }
 
+.footer-background {
+  background-image: url('./image/footer-bg2.png');
+  background-size: cover;  
+  background-position: center;
+}
+
 html {
   scrollbar-gutter: stable;
 }
