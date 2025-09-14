@@ -31,7 +31,6 @@
 
         .logo-item img {
             max-height: 40px;
-            /* Adjust this value to set the height of your logos */
             width: auto;
             object-fit: contain;
         }
@@ -42,20 +41,21 @@
     <!------------------------------- Navbar and Banner -------------------------->
     <nav class="banner-background">
         <!-- Header -->
-        <header class="px-4 2xl:px-20 border-b border-[#2a5dca26] py-6">
+        <header id="main-header"
+            class="px-4 2xl:px-20 border-b border-[#2a5dca26] py-6 fixed w-full top-0 z-50 transition-all duration-500">
             <div class="flex items-center justify-between">
-                <div class="flex items-center gap-20">
+                <div class="flex items-center gap-16">
                     <img src="./image/logo.png" alt="image-logo" />
                     <!-- Dasktop -->
                     <ul class="hidden md:flex items-center">
                         <li>
-                            <a href="/" class="font-semibold text-gray-600 hover:text-[#2660B5]">Home +</a>
+                            <a href="/" class="font-semibold text-gray-600 hover:text-yellow-500">Home +</a>
                         </li>
                     </ul>
                 </div>
                 <div class="hidden md:block">
                     <button
-                        class="border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-black transition-colors duration-300">
+                        class="border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-gray-600 transition-colors duration-300">
                         Contact Us
                         <span>
                             <i class="fa-solid fa-arrow-up rotate-45"></i>
@@ -101,9 +101,8 @@
                 </div>
             </div>
         </header>
-
         <!-- Banner -->
-        <div class="container mx-auto pt-12 md:pt-24 px-4">
+        <div class="container mx-auto pt-32 md:pt-48 px-4">
             <div class="flex items-center justify-center md:justify-start gap-3 font-bold text-center md:text-left">
                 <img class="hidden sm:block" src="./image/section-badge1.png" alt="banner image" />
                 <h1 class="text-[#2660B5] text-2xl">Reliable Trading Signals for Consistent Profits</h1>
@@ -118,7 +117,7 @@
                 <div class="relative w-28 h-28 md:w-40 md:h-40 flex items-center justify-center">
                     <div
                         class="w-28 h-28 md:w-40 md:h-40 border border-[#9c9fa6] rounded-full flex items-center justify-center animate-[spin_10s_linear_infinite]">
-                        <img src="./image/text-circle.png" alt="circle image" />
+                        <img class="w-full" src="./image/text-circle.png" alt="circle image" />
                     </div>
                     <div class="border border-[#9c9fa6] rounded-full p-3 md:p-4 absolute">
                         <div class="bg-[#2660B5] w-8 h-8 md:w-10 md:h-10 rounded-full flex items-center justify-center">
@@ -138,12 +137,12 @@
     <main>
         <!--------------------------- Our Package Section ------------------------->
         <section
-            class='max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center my-20 md:my-28 gap-10 lg:gap-20 px-4'>
+            class='max-w-7xl mx-auto flex flex-col lg:flex-row justify-between items-center my-16 md:my-28 gap-10 lg:gap-20 px-4'>
             <div class='flex flex-col sm:flex-row w-full lg:w-1/2'>
                 <div class="flex flex-col gap-3 sm:gap-0">
                     <!-- card-1 -->
                     <div
-                        class="px-4 py-8 border border-[#132f5933] space-y-5 cursor-pointer group hover:bg-[#2660B5] hover:text-white transition-colors duration-300">
+                        class="px-4 py-8 border border-[#132f5933] space-y-5 cursor-pointer group hover:bg-[#2660B5] hover:text-white transition-colors duration-300 ">
                         <div class="flex justify-between items-center">
                             <img src='./image/chart.png' alt="card" class="w-14 h-14 object-contain" />
                             <div
@@ -235,7 +234,7 @@
                     </div>
                     <div class='mt-4'>
                         <button
-                            class='border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-black transition-colors duration-300'>
+                            class='border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-gray-600 hover:border-gray-600 transition-colors duration-300'>
                             See All Packages
                             <span>
                                 <i class="fa-solid fa-arrow-up rotate-45"></i>
@@ -304,7 +303,7 @@
                     </div>
                     <div class='mt-10 mb-16'>
                         <button
-                            class='border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-black transition-colors duration-300'>
+                            class='border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-gray-600 hover:border-gray-600 transition-colors duration-300'>
                             Read More
                             <span>
                                 <i class="fa-solid fa-arrow-up rotate-45"></i>
@@ -373,7 +372,7 @@
                     </div>
                     <div class='flex flex-col sm:flex-row items-center gap-5'>
                         <button
-                            class='border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-black transition-colors duration-300'>
+                            class='border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5] text-white font-bold hover:bg-white hover:text-gray-600 hover:border-gray-600  transition-colors duration-300'>
                             Read More
                             <span>
                                 <i class="fa-solid fa-arrow-up rotate-45"></i>
@@ -408,7 +407,7 @@
                     </div>
                     <div class='mt-4'>
                         <button class='border rounded-full py-3.5 px-7 flex items-center gap-1 bg-[#2660B5]
-                            text-white font-bold hover:bg-white hover:text-black transition-colors duration-300'>
+                            text-white font-bold hover:bg-white hover:text-gray-600 hover:border-gray-600 transition-colors duration-300'>
                             Contact Us
                             <span>
                                 <i class="fa-solid fa-arrow-up rotate-45"></i>
@@ -455,7 +454,7 @@
                         </div>
                         <div class="swiper-slide">
                             <div class="logo-item">
-                                <img src="./image/jotform.png" alt="ClickUp">
+                                <img src="./image/airtable.png" alt="ClickUp">
                             </div>
                         </div>
                         <div class="swiper-slide">
@@ -632,7 +631,7 @@
                 slidesPerView: 2,
                 spaceBetween: 30,
                 autoplay: {
-                    delay: 2500,
+                    delay: 2000,
                     disableOnInteraction: false,
                 },
                 breakpoints: {
@@ -650,6 +649,19 @@
                     },
                 },
             });
+        });
+    </script>
+    <script>
+        window.addEventListener("scroll", function () {
+            const header = document.getElementById("main-header");
+
+            if (window.scrollY > 50) {
+                header.classList.add("bg-white", "shadow-md");
+                header.style.top = "0px";
+            } else {
+                header.classList.remove("bg-white", "shadow-md");
+                header.style.top = "0px";
+            }
         });
     </script>
 </body>
